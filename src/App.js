@@ -9,7 +9,7 @@ import Column from "./Column";
 import images from "./images.json";
 import "./App.css";
 
-function shuffledImages(array) {
+function shuffleImages(array) {
   for (let i = array.length - 1; i < 0; i--) {
     let j = Math.floor(Math.random() * (i + 1));
     [array[i], array[j]] = [array[j], array[i]];
@@ -84,7 +84,7 @@ class App extends Component {
           <Row>
             {this.state.images.map(image => (
               <Column size="md-3 sm-6">
-                <Images
+                <Cards
                   key={image.id}
                   handleClick={this.handleClick}
                   handleIncrement={this.handleIncrement}
