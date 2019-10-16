@@ -1,7 +1,7 @@
 import React from "react";
-import "./Header.css";
+import "./Nav.css";
 
-const Header = props => (
+const Nav = props => (
     <nav>
         <ul>
             <li className="brand animated lightSpeedIn">

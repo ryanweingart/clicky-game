@@ -1,6 +1,6 @@
 import React from "react";
 import Cards from "./components/Cards";
-import Header from "./components/Header";
+import Nav from "./components/Nav";
 import Title from "./components/Title";
 import Container from "./components/Container";
 import images from "./images.json";
@@ -63,7 +63,19 @@ class App extends Component {
     this.setState({ images: shuffledImages});
   };
 
-  
+  render() {
+    return (
+      <Wrapper>
+        <Nav
+          title="Clicky Game"
+          score={this.state.score}
+          highScore={this.state.highScore}
+          winOrLose={this.state.winOrLose}
+        />
+        
+      </Wrapper>
+    )
+  }
 }
 
 export default App;
