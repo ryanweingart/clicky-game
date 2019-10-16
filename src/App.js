@@ -14,6 +14,18 @@ function shuffleImages(array) {
   return array;
 };
 
+class App extends Component {
+  state = {
+    images,
+    score: 0,
+    highScore: 0,
+    rightOrWrong: "",
+    clicked: []
+  };
 
+  handleClick = id => {
+    
+  }
+}
 
 export default App;
