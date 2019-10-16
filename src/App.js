@@ -3,6 +3,9 @@ import Cards from "./components/Cards";
 import Nav from "./components/Nav";
 import Title from "./components/Title";
 import Wrapper from "./components/Wrapper";
+import Container from "./Container";
+import Row from "./Row";
+import Column from "./Column";
 import images from "./images.json";
 import "./App.css";
 
