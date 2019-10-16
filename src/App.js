@@ -32,6 +32,22 @@ class App extends Component {
     }
   };
 
+  handleIncrement = () => {
+    const newScore = this.state.score + 1;
+
+    this.setState({
+      score: newScore,
+      rightOrWrong: ""
+    });
+
+    if (newScore >= this.state.highScore) {
+      this.setState({ highScore: newScore});
+    } else if (newScore === 12) {
+      this.setState({ rightOrWrong: "You Win!"});
+    } 
+    this.handleShuffle();
+  };
+
   
 }
 
