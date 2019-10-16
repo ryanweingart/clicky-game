@@ -8,7 +8,7 @@ const Header = props => (
                 <a href="/clicky-game/">{props.title}</a>
             </li>
 
-            <li id="rightOrWrong">{props.rightWrong}</li>
+            <li id="winOrLose">{props.winOrLose}</li>
 
             <li id="score">Score: {props.score}</li>
 

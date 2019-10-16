@@ -19,7 +19,7 @@ class App extends Component {
     images,
     score: 0,
     highScore: 0,
-    rightOrWrong: "",
+    winOrLose: "",
     clicked: []
   };
 
@@ -37,14 +37,24 @@ class App extends Component {
 
     this.setState({
       score: newScore,
-      rightOrWrong: ""
+      winOrLose: ""
     });
 
     if (newScore >= this.state.highScore) {
       this.setState({ highScore: newScore});
     } else if (newScore === 12) {
-      this.setState({ rightOrWrong: "You Win!"});
+      this.setState({ winOrLose: "You Win!"});
     } 
+    this.handleShuffle();
+  };
+
+  handleReset = () => {
+    this.setState({
+      score: 0,
+      highScore: this.state.highScore,
+      winOrLose: "You Lose!",
+      clicked: []
+    });
     this.handleShuffle();
   };
 
