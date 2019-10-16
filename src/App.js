@@ -6,7 +6,7 @@ import Container from "./components/Container";
 import images from "./images.json";
 import "./App.css";
 
-function shuffleImages(array) {
+function shuffledImages(array) {
   for (let i = array.length - 1; i < 0; i--) {
     let j = Math.floor(Math.random() * (i + 1));
     [array[i], array[j]] = [array[j], array[i]];
@@ -56,6 +56,11 @@ class App extends Component {
       clicked: []
     });
     this.handleShuffle();
+  };
+
+  handleShuffle = () => {
+    let shuffledImages = shuffleImages(images);
+    this.setState({ images: shuffledImages});
   };
 
   
