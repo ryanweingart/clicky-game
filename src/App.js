@@ -72,9 +72,30 @@ class App extends Component {
           highScore={this.state.highScore}
           winOrLose={this.state.winOrLose}
         />
-        
+
+        <Title>
+          The goal of this memorization game is to click each image only once until you get to 12 points. If you hit an image more than once, you lose!
+        </Title>
+
+        <Container>
+          <Row>
+            {this.state.images.map(image => (
+              <Column size="md-3 sm-6">
+                <Images
+                  key={image.id}
+                  handleClick={this.handleClick}
+                  handleIncrement={this.handleIncrement}
+                  handleReset={this.handleReset}
+                  handleShuffle={this.handleShuffle}
+                  id={image.id}
+                  image={image.image}
+                />
+              </Column>
+            ))}
+          </Row>
+        </Container>
       </Wrapper>
-    )
+    );
   }
 }
 
