@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Cards from "./components/Cards";
 import Nav from "./components/Nav";
 import Title from "./components/Title";
-import Container from "./components/Container";
+import Wrapper from "./components/Wrapper";
 import images from "./images.json";
 import "./App.css";
 
