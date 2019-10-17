@@ -10,7 +10,7 @@ import images from "./images.json";
 import "./App.css";
 
 function shuffleImages(array) {
-  for (let i = array.length - 1; i < 0; i--) {
+  for (let i = array.length - 1; i > 0; i--) {
     let j = Math.floor(Math.random() * (i + 1));
     [array[i], array[j]] = [array[j], array[i]];
   }
@@ -25,6 +25,28 @@ class App extends Component {
     winOrLose: "",
     clicked: []
   };
+  // componentWillMount() {
+  //   const clicked = this.handleShuffle(images);
+  //   this.setState({ clicked })
+  // }
+
+  // handleShuffle(array) {
+  //   let currentIndex = array.length;
+  //   let temporaryValue;
+  //   let randomIndex;
+
+  //   while (0 !== currentIndex) {
+
+  //     randomIndex = Math.floor(Math.random() * currentIndex);
+  //     currentIndex -= 1;
+
+  //     temporaryValue = array[currentIndex];
+  //     array[currentIndex] = array[randomIndex];
+  //     array[randomIndex] = temporaryValue;
+  //   }
+
+  //   return array;
+  // }
 
   handleClick = id => {
     if (this.state.clicked.indexOf(id) === -1) {
