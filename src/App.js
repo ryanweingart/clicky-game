@@ -92,7 +92,7 @@ class App extends Component {
     return (
       <Wrapper>
         <Nav
-          title="Clicky Game"
+          title="Web Development Clicky Game"
           score={this.state.score}
           highScore={this.state.highScore}
           winOrLose={this.state.winOrLose}
