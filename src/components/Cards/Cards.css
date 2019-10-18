@@ -1,0 +1,16 @@
+.card {
+    width: 150px;
+    height: 150px;
+    margin: 25px;
+    position: relative;
+    transition: all .2s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.card:active {
+    transform: tanslate(1px, 1px);
+}
