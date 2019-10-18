@@ -72,14 +72,14 @@ class App extends Component {
     return (
       <Wrapper>
         <Nav
-          title="Web Development Clicky Game"
+          title="Development Clicky"
           score={this.state.score}
           highScore={this.state.highScore}
           winOrLose={this.state.winOrLose}
         />
 
         <Title>
-          The goal of this memorization game is to click each image only once until you get to 12 points. If you hit an image more than once, you lose!
+          Test your memory! Click each image only once as they shuffle to reach 12 points!
         </Title>
 
         <Container>
