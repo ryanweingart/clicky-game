@@ -25,29 +25,7 @@ class App extends Component {
     winOrLose: "",
     clicked: []
   };
-  // componentWillMount() {
-  //   const clicked = this.handleShuffle(images);
-  //   this.setState({ clicked })
-  // }
-
-  // handleShuffle(array) {
-  //   let currentIndex = array.length;
-  //   let temporaryValue;
-  //   let randomIndex;
-
-  //   while (0 !== currentIndex) {
-
-  //     randomIndex = Math.floor(Math.random() * currentIndex);
-  //     currentIndex -= 1;
-
-  //     temporaryValue = array[currentIndex];
-  //     array[currentIndex] = array[randomIndex];
-  //     array[randomIndex] = temporaryValue;
-  //   }
-
-  //   return array;
-  // }
-
+ 
   handleClick = id => {
     if (this.state.clicked.indexOf(id) === -1) {
       this.handleIncrement();
@@ -65,11 +43,16 @@ class App extends Component {
       winOrLose: ""
     });
 
-    if (newScore >= this.state.highScore) {
+    if (newScore === 12) {
       this.setState({ highScore: newScore});
-    } else if (newScore === 12) {
+
       this.setState({ winOrLose: "You Win!"});
     } 
+  //   if (newScore >= this.state.highScore) {
+  //     this.setState({ highScore: newScore});
+  //   } else if (newScore === 12) {
+  //     this.setState({ winOrLose: "You Win!"});
+  //   } 
     this.handleShuffle();
   };
 
